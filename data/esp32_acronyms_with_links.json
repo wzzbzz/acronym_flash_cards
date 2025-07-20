@@ -1,0 +1,204 @@
+{
+  "Hardware & Microcontroller Related": {
+    "ESP32": {
+      "meaning": "Espressif Systems Protocol 32-bit",
+      "wikipedia": "https://en.wikipedia.org/wiki/ESP32"
+    },
+    "SoC": {
+      "meaning": "System on a Chip",
+      "wikipedia": "https://en.wikipedia.org/wiki/System_on_a_chip"
+    },
+    "GPIO": {
+      "meaning": "General Purpose Input/Output",
+      "wikipedia": "https://en.wikipedia.org/wiki/General-purpose_input/output"
+    },
+    "ADC": {
+      "meaning": "Analog-to-Digital Converter",
+      "wikipedia": "https://en.wikipedia.org/wiki/Analog-to-digital_converter"
+    },
+    "DAC": {
+      "meaning": "Digital-to-Analog Converter",
+      "wikipedia": "https://en.wikipedia.org/wiki/Digital-to-analog_converter"
+    },
+    "PWM": {
+      "meaning": "Pulse-Width Modulation",
+      "wikipedia": "https://en.wikipedia.org/wiki/Pulse-width_modulation"
+    },
+    "UART": {
+      "meaning": "Universal Asynchronous Receiver/Transmitter",
+      "wikipedia": "https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter"
+    },
+    "I2C": {
+      "meaning": "Inter-Integrated Circuit",
+      "wikipedia": "https://en.wikipedia.org/wiki/I%C2%B2C"
+    },
+    "I2S": {
+      "meaning": "Integrated Interchip Sound",
+      "wikipedia": "https://en.wikipedia.org/wiki/I%C2%B2S"
+    },
+    "RMII": {
+      "meaning": "Reduced Media-Independent Interface",
+      "wikipedia": "https://en.wikipedia.org/wiki/Media-independent_interface"
+    },
+    "EN": {
+      "meaning": "Enable (pin for 3.3V regulator)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Enable_pin"
+    },
+    "RTC": {
+      "meaning": "Real-Time Clock",
+      "wikipedia": "https://en.wikipedia.org/wiki/Real-time_clock"
+    },
+    "ULP": {
+      "meaning": "Ultra Low Power",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ultra-low-power"
+    },
+    "LED": {
+      "meaning": "Light Emitting Diode",
+      "wikipedia": "https://en.wikipedia.org/wiki/Light-emitting_diode"
+    },
+    "PIR": {
+      "meaning": "Passive Infrared",
+      "wikipedia": "https://en.wikipedia.org/wiki/Passive_infrared_sensor"
+    },
+    "RGB": {
+      "meaning": "Red Green Blue (LED type)",
+      "wikipedia": "https://en.wikipedia.org/wiki/RGB_color_model"
+    },
+    "NC": {
+      "meaning": "Normally Closed",
+      "wikipedia": "https://en.wikipedia.org/wiki/Relay#Contacts"
+    },
+    "NO": {
+      "meaning": "Normally Open",
+      "wikipedia": "https://en.wikipedia.org/wiki/Relay#Contacts"
+    },
+    "COM": {
+      "meaning": "Common (relay contact)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Relay"
+    },
+    "VCC": {
+      "meaning": "Voltage at the Common Collector",
+      "wikipedia": "https://en.wikipedia.org/wiki/Vcc"
+    },
+    "GND": {
+      "meaning": "Ground",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ground_(electricity)"
+    },
+    "JD-VCC": {
+      "meaning": "Jumper Drive Voltage at Common Collector",
+      "wikipedia": "https://www.electronicwings.com/nodemcu/relay-interfacing-with-nodemcu"
+    },
+    "VIN": {
+      "meaning": "Voltage Input",
+      "wikipedia": "https://en.wikipedia.org/wiki/Voltage_source"
+    }
+  },
+  "Wireless Communication": {
+    "Wi-Fi": {
+      "meaning": "Wireless Fidelity",
+      "wikipedia": "https://en.wikipedia.org/wiki/Wi-Fi"
+    },
+    "BLE": {
+      "meaning": "Bluetooth Low Energy",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bluetooth_Low_Energy"
+    },
+    "MAC": {
+      "meaning": "Media Access Control (Address)",
+      "wikipedia": "https://en.wikipedia.org/wiki/MAC_address"
+    }
+  },
+  "Software & Development Tools": {
+    "IDE": {
+      "meaning": "Integrated Development Environment",
+      "wikipedia": "https://en.wikipedia.org/wiki/Integrated_development_environment"
+    },
+    "JSON": {
+      "meaning": "JavaScript Object Notation",
+      "wikipedia": "https://en.wikipedia.org/wiki/JSON"
+    },
+    "HTML": {
+      "meaning": "HyperText Markup Language",
+      "wikipedia": "https://en.wikipedia.org/wiki/HTML"
+    },
+    "CSS": {
+      "meaning": "Cascading Style Sheets",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+    },
+    "HTTP": {
+      "meaning": "Hypertext Transfer Protocol",
+      "wikipedia": "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"
+    },
+    "URL": {
+      "meaning": "Uniform Resource Locator",
+      "wikipedia": "https://en.wikipedia.org/wiki/URL"
+    },
+    "IP": {
+      "meaning": "Internet Protocol",
+      "wikipedia": "https://en.wikipedia.org/wiki/Internet_Protocol"
+    },
+    "COM Port": {
+      "meaning": "Communications Port (serial port on a PC)",
+      "wikipedia": "https://en.wikipedia.org/wiki/COM_(hardware_interface)"
+    }
+  },
+  "Technical Specs & Libraries": {
+    "ROM": {
+      "meaning": "Read-Only Memory",
+      "wikipedia": "https://en.wikipedia.org/wiki/Read-only_memory"
+    },
+    "SRAM": {
+      "meaning": "Static Random-Access Memory",
+      "wikipedia": "https://en.wikipedia.org/wiki/Static_random-access_memory"
+    },
+    "eFuse": {
+      "meaning": "Electrically Programmable Fuse",
+      "wikipedia": "https://en.wikipedia.org/wiki/EFuse"
+    },
+    "MiB": {
+      "meaning": "Mebibyte (2^20 bytes)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mebibyte"
+    },
+    "SSL": {
+      "meaning": "Secure Sockets Layer",
+      "wikipedia": "https://en.wikipedia.org/wiki/https://en.wikipedia.org/wiki/Transport_Layer_Security#SSL_1.0,_2.0,_and_3.0"
+    },
+    "TLS": {
+      "meaning": "Transport Layer Security",
+      "wikipedia": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
+    },
+    "VCP": {
+      "meaning": "Virtual COM Port",
+      "wikipedia": "https://en.wikipedia.org/wiki/Virtual_COM_port"
+    },
+    "CH340": {
+      "meaning": "Common USB to UART converter chip",
+      "wikipedia": "https://en.wikipedia.org/wiki/USB-to-serial_adapter"
+    },
+    "CP2102": {
+      "meaning": "Silicon Labs USB to UART bridge",
+      "wikipedia": "https://en.wikipedia.org/wiki/USB-to-serial_adapter"
+    },
+    "ADC1/2_CHx": {
+      "meaning": "ADC Channel x on ADC1/2",
+      "wikipedia": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html"
+    }
+  },
+  "Libraries & APIs": {
+    "SPIFFS": {
+      "meaning": "SPI Flash File System",
+      "wikipedia": "https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#SPI_Flash_File_System_(SPIFFS)"
+    },
+    "API": {
+      "meaning": "Application Programming Interface",
+      "wikipedia": "https://en.wikipedia.org/wiki/API"
+    },
+    "CSS": {
+      "meaning": "Cascading Style Sheets",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+    },
+    "CDN": {
+      "meaning": "Content Delivery Network",
+      "wikipedia": "https://en.wikipedia.org/wiki/Content_delivery_network"
+    }
+  }
+}

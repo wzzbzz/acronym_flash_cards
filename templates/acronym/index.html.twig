@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acronym index{% endblock %}
+
+{% block body %}
+    <h1>Acronym index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Code</th>
+                <th>Meaning</th>
+                <th>WikipediaUrl</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for acronym in acronyms %}
+            <tr>
+                <td>{{ acronym.id }}</td>
+                <td>{{ acronym.code }}</td>
+                <td>{{ acronym.meaning }}</td>
+                <td>{{ acronym.wikipediaUrl }}</td>
+                <td>
+                    <a href="{{ path('app_acronym_show', {'id': acronym.id}) }}">show</a>
+                    <a href="{{ path('app_acronym_edit', {'id': acronym.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_acronym_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acronym Flashcards{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>Acronym Flashcards</h1>
+        <p class="text-muted">Click any acronym to learn more.</p>
+
+        {% for category in categories %}
+            <div class="mt-4">
+                <h2>{{ category.name }}</h2>
+                <ul>
+                    {% for acronym in category.acronyms %}
+                        <li>
+                            <strong>{{ acronym.code }}</strong>:
+                            {{ acronym.meaning }}
+                            <a href="{{ acronym.wikipediaUrl }}" target="_blank">🔗</a>
+                        </li>
+                    {% else %}
+                        <li><em>No acronyms in this category.</em></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

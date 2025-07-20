@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acronym Flashcards - {{ mode == 'study' ? 'Study Mode' : 'Test Mode' }}{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1 class="mb-4 text-center">{{ mode == 'study' ? 'Study Mode' : 'Test Mode' }}</h1>
+
+    {% if mode == 'study' %}
+        <p class="text-muted text-center">All acronyms and their meanings shown for study.</p>
+
+        <div class="container p-4" data-controller="card-browser">
+        {% for category in categories %}
+            {% for acronym in category.acronyms %}
+                <div class="card shadow-sm mb-4 p-4 text-center d-none"
+                    data-card-browser-target="card"
+                    style="min-height: 60vh;">
+                    <h2 class="display-4 mb-4">{{ acronym.code }}</h2>
+                    <p class="lead">{{ acronym.meaning }}</p>
+
+                    {% if acronym.ogImageUrl %}
+                        <img src="{{ acronym.ogImageUrl }}" alt="Image for {{ acronym.code }}"
+                            class="img-fluid rounded my-3"
+                            style="max-height: 200px; max-width: 100%; object-fit: contain;">
+                    {% endif %}
+
+                    {% if acronym.ogDescription %}
+                        <p class="text-muted" style="font-size: 0.9rem;">{{ acronym.ogDescription }}</p>
+                    {% endif %}
+
+                    {% if acronym.wikipediaUrl %}
+                        <a href="{{ acronym.wikipediaUrl }}" target="_blank" class="btn btn-outline-secondary">
+                            Learn More
+                        </a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        {{ include('partials/_card_navigation.html.twig') }}
+    </div>
+
+
+    {% elseif mode == 'test' %}
+        <p class="text-muted text-center">Test yourself by guessing the meanings of acronyms.</p>
+
+        <div class="container p-4" data-controller="card-browser">
+            {% for category in categories %}
+                {% for acronym in category.acronyms %}
+                    <div class="card shadow-sm mb-4 p-4 text-center d-none"
+                        data-card-browser-target="card"
+                        data-controller="reveal"
+                        style="min-height: 60vh;">
+                        <h2 class="display-4 mb-4">{{ acronym.code }}</h2>
+
+                        <button type="button" class="btn btn-outline-primary btn-lg mb-3"
+                                data-action="click->reveal#toggle">
+                            Reveal Meaning
+                        </button>
+
+                        <div data-reveal-target="meaning" class="d-none">
+                            <p class="lead">{{ acronym.meaning }}</p>
+
+                            {% if acronym.ogImageUrl %}
+                                <img src="{{ acronym.ogImageUrl }}" alt="Image for {{ acronym.code }}"
+                                    class="img-fluid rounded my-3"
+                                    style="max-height: 200px; max-width: 100%; object-fit: contain;">
+                            {% endif %}
+
+                            {% if acronym.ogDescription %}
+                                <p class="text-muted" style="font-size: 0.9rem;">{{ acronym.ogDescription }}</p>
+                            {% endif %}
+
+                            {% if acronym.wikipediaUrl %}
+                                <a href="{{ acronym.wikipediaUrl }}" target="_blank" class="btn btn-outline-secondary">
+                                    Learn More
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+
+            {{ include('partials/_card_navigation.html.twig') }}
+        </div>
+    {% endif %}
+
+
+    <div class="mt-4 text-center">
+        <a href="{{ path('home') }}" class="btn btn-secondary">← Back to Home</a>
+    </div>
+</div>
+{% endblock %}
