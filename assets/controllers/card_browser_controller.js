@@ -6,7 +6,7 @@ export default class extends Controller {
     connect() {
         this.index = 0;
         this.cards = this.cardTargets;
-        this.showCard();
+        this.shuffle();
     }
 
     next() {
@@ -38,4 +38,5 @@ export default class extends Controller {
             card.classList.toggle('d-none', i !== this.index);
         });
     }
+
 }
