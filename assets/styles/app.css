@@ -1,3 +1,39 @@
 body {
     background-color: skyblue;
 }
+
+
+.card-flash {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-flash:hover {
+  transform: scale(1.02);
+}
+
+.card-flash h2 {
+  font-size: 2.5rem;
+}
+
+.card-flash p.lead {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .card-flash {
+    padding: 1rem;
+  }
+  .card-flash h2 {
+    font-size: 1.75rem;
+  }
+  .card-flash p.lead {
+    font-size: 1rem;
+  }
+}

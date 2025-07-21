@@ -3,20 +3,30 @@
 {% block title %}Acronym Flashcards - {{ mode == 'study' ? 'Study Mode' : 'Test Mode' }}{% endblock %}
 
 {% block body %}
-<div class="container mt-4">
+<div class="container-fluid w-100 mt-4">
     <h1 class="mb-4 text-center">{{ mode == 'study' ? 'Study Mode' : 'Test Mode' }}</h1>
 
     {% if mode == 'study' %}
         <p class="text-muted text-center">All acronyms and their meanings shown for study.</p>
 
-        <div class="container p-4" data-controller="card-browser">
+        <div class="container-fluid p-4" data-controller="card-browser">
         {% for category in categories %}
             {% for acronym in category.acronyms %}
-                <div class="card shadow-sm mb-4 p-4 text-center d-none"
-                    data-card-browser-target="card"
-                    style="min-height: 60vh;">
-                    <h2 class="display-4 mb-4">{{ acronym.code }}</h2>
-                    <p class="lead">{{ acronym.meaning }}</p>
+                <div class="card shadow-sm d-flex flex-column justify-content-center align-items-center text-center mx-auto mb-4"
+     style="
+        height: 80vh;
+        width: 100%;
+        max-width: 90vw
+        padding: 2rem;
+        border-radius: 1rem;
+     "
+     data-card-browser-target="card"
+     data-controller="reveal">
+
+
+
+                    <h2 class="display-1 mb-4">{{ acronym.code }}</h2>
+                    <p class="lead display-2">{{ acronym.meaning }}</p>
 
                     {% if acronym.ogImageUrl %}
                         <img src="{{ acronym.ogImageUrl }}" alt="Image for {{ acronym.code }}"
@@ -25,11 +35,11 @@
                     {% endif %}
 
                     {% if acronym.ogDescription %}
-                        <p class="text-muted" style="font-size: 0.9rem;">{{ acronym.ogDescription }}</p>
+                        <p class="text-muted fs-1">{{ acronym.ogDescription }}</p>
                     {% endif %}
 
                     {% if acronym.wikipediaUrl %}
-                        <a href="{{ acronym.wikipediaUrl }}" target="_blank" class="btn btn-outline-secondary">
+                        <a href="{{ acronym.wikipediaUrl }}" target="_blank" class="btn btn-outline-secondary ">
                             Learn More
                         </a>
                     {% endif %}
@@ -47,11 +57,17 @@
         <div class="container p-4" data-controller="card-browser">
             {% for category in categories %}
                 {% for acronym in category.acronyms %}
-                    <div class="card shadow-sm mb-4 p-4 text-center d-none"
-                        data-card-browser-target="card"
-                        data-controller="reveal"
-                        style="min-height: 60vh;">
-                        <h2 class="display-4 mb-4">{{ acronym.code }}</h2>
+                    <div class="card shadow-sm d-flex flex-column justify-content-center align-items-center text-center mx-auto mb-4"
+     style="
+        height: 80vh;
+        width: 100%;
+        max-width: 90vw;
+        padding: 2rem;
+        border-radius: 1rem;
+     "
+     data-card-browser-target="card"
+     data-controller="reveal">
+                        <h2 class="display-1 mb-4">{{ acronym.code }}</h2>
 
                         <button type="button" class="btn btn-outline-primary btn-lg mb-3"
                                 data-action="click->reveal#toggle">
@@ -59,7 +75,7 @@
                         </button>
 
                         <div data-reveal-target="meaning" class="d-none">
-                            <p class="lead">{{ acronym.meaning }}</p>
+                            <p class="lead display-2">{{ acronym.meaning }}</p>
 
                             {% if acronym.ogImageUrl %}
                                 <img src="{{ acronym.ogImageUrl }}" alt="Image for {{ acronym.code }}"
@@ -68,7 +84,7 @@
                             {% endif %}
 
                             {% if acronym.ogDescription %}
-                                <p class="text-muted" style="font-size: 0.9rem;">{{ acronym.ogDescription }}</p>
+                                <p class="text-muted fs-1">{{ acronym.ogDescription }}</p>
                             {% endif %}
 
                             {% if acronym.wikipediaUrl %}
