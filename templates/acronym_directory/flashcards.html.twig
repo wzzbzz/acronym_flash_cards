@@ -1,13 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acronym Flashcards - {{ mode == 'study' ? 'Study Mode' : 'Test Mode' }}{% endblock %}
+{% block title %}Arduino Acronym Flashcards{% endblock %}
 
 {% block body %}
 <div class="container-fluid w-100 mt-4">
-    <h1 class="mb-4 text-center">{{ mode == 'study' ? 'Study Mode' : 'Test Mode' }}</h1>
-
+    <h2 class="mb-4 text-center">Arduino Flash Cards</h2> 
     {% if mode == 'study' %}
-        <p class="text-muted text-center">All acronyms and their meanings shown for study.</p>
+        {# <p class="text-muted text-center">All acronyms and their meanings shown for study.</p>  #}
 
         <div class="container-fluid p-4" data-controller="card-browser">
         {% for category in categories %}
