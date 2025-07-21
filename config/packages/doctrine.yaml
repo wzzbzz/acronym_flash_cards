@@ -15,6 +15,9 @@ doctrine:
         validate_xml_mapping: true
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
+        configuration:
+            identity_generation_preferences:
+                Doctrine\DBAL\Platforms\PostgreSQLPlatform: SEQUENCE
         mappings:
             App:
                 type: attribute
